@@ -15,7 +15,7 @@
                 <div class="remove-messages"></div>
 
                 <div class="div-action pull pull-right" style="padding-bottom:20px;">
-                    <button class="btn btn-default" data-toggle="modal" data-target="#addBrandModal"> <i class="glyphicon glyphicon-plus-sign"></i> Add Brand </button>
+                    <button class="btn btn-default" data-toggle="modal" data-target="#addBrandModal" onclick="addBrand()"> <i class="glyphicon glyphicon-plus-sign"></i> Add Brand </button>
                 </div> <!-- /div-action -->
 
                 <table class="table" id="manageBrandTable">
@@ -92,6 +92,7 @@
 
 
       <div class="modal-body">
+        <div id="edit-brand-messages"></div>
 
       <div class="form-group">
           <label for="editBrandName" class="col-sm-3 control-label"> Brand Name : </label>
@@ -102,7 +103,7 @@
         <div class="form-group">
           <label for="editBrandStatus" class="col-sm-3 control-label">Status : </label>
           <div class="col-sm-9">
-            <select class="form-control" id="editBrandStatus" name="editBrandName">
+            <select class="form-control" id="editBrandStatus" name="editBrandStatus">
               <option value="">~~SELECT~~</option>
               <option value="1">Available</option>
               <option value="2">Not Available</option>
@@ -111,9 +112,9 @@
       </div>
         
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer editBrandFooter">
+        <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
+        <button type="submit" class="btn btn-primary" id="editBrandBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> Save changes</button>
 
       </form>
         
@@ -135,7 +136,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> Close</button>
-        <button type="button" class="btn btn-primary"> <i class="glyphicon glyphicon-ok-sign"></i> Save changes</button>
+        <button type="button" class="btn btn-primary" id="removeBrandBtn" data-loading-text="Loading..."> <i class="glyphicon glyphicon-ok-sign"></i> Save changes</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

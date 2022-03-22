@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Inventory Management System</title>
 
-     <!-- bootstrap -->
-     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- bootstrap theme -->
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.min.css">
     <!-- font awasome -->
@@ -29,7 +29,7 @@
 <body>
 
 <nav class="navbar navbar-default navbar-static-top">
-  <div class="container-fluid">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
