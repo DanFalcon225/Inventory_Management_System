@@ -22,14 +22,14 @@ if($result->num_rows > 0){
             $activeCategories = "<label class='label label-danger'>Not Available</label>";
         }
 
-            $button = '<!-- Single button -->
+            $button = '
             <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Action <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a type="button"> <i class="glyphicon glyphicon-edit"></i> Edit </a></li>
-                <li><a type="button"> <i class="glyphicon glyphicon-trash"></i> Remove </a></li>
+                <li><a type="button" data-toggle="modal" data-target="#editCategoriesModal" onclick="editCategories('.$categoriesId.')"><i class="glyphicon glyphicon-edit"></i> Edit </a></li>
+                <li><a type="button" data-toggle="modal" data-target="#removeCategoriesModal" onclick="removeCategories('.$categoriesId.')"><i class="glyphicon glyphicon-trash"></i> Remove </a></li>
             </ul>
             </div>';
 

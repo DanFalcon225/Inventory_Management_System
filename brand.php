@@ -85,7 +85,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"> <i class="fa fa-plus"></i> Edit Brand</h4>
+        <h4 class="modal-title"> <i class="glyphicon glyphicon-edit"></i> Edit Brand</h4>
       </div>
 
       <form class="form-horizontal" id="editBrandForm" action="php_action/editBrand.php" method="POST">

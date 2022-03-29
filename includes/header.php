@@ -50,6 +50,7 @@
         <li id="navBrand"><a href="brand.php"><i class="glyphicon glyphicon-btc"></i> Brand </a></li>
         <li id="navCategories"><a href="categories.php"><i class="glyphicon glyphicon-th-list"></i> Category </a></li>
         <li id="navLocations"><a href="location.php"><i class="glyphicon glyphicon-barcode"></i> Stock</a></li>
+        <li id="navProduct"><a href="product.php"><i class="glyphicon glyphicon-ruble"></i> Product</a></li>
         <li class="dropdown" id="navOrder">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-shopping-cart"></i> Orders <span class="caret"></span></a>
           <ul class="dropdown-menu">
