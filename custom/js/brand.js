@@ -24,6 +24,12 @@ function addBrand(){
 
      // submit brand form function
      $("#submitBrandForm").unbind('submit').bind('submit', function(){
+
+        // remove the error text
+        $(".text-danger").remove();
+        // remove the form error
+        $(".form-group").removeClass('has-error').removeClass('has-success');
+
         
         var brandName = $("#brandName").val();
         var brandStatus = $("#brandStatus").val();
