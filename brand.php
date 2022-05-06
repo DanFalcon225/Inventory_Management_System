@@ -69,8 +69,8 @@
       </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary" id="createBrandBtn" data-loading-text="Loading..." > Save changes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><i class="glyphicon glyphicon-remove-sign"></i> Close</button>
+          <button type="submit" class="btn btn-primary" id="createBrandBtn" data-loading-text="Loading..." > <i class="glyphicon glyphicon-ok-sign"></i> Save changes</button>
         </div>
 
       </form>

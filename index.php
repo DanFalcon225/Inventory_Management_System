@@ -117,9 +117,14 @@ if($_POST){
                             </div>
                          
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
+                                <div class="col-sm-offset-2 col-xs-6">
                                 <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-log-in"></i> Sign in</button>
                                 </div>
+                            </div>
+
+                            <!-- Register buttons -->
+                            <div class="text-center">
+                                <p>Do not have account? <a href="registrationForm.php">Register</a></p>
                             </div>
                         </form>
 
