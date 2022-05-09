@@ -1,9 +1,13 @@
 
 <?php require_once 'includes/header.php'; ?>
 
+
+
 <?php 
 
-$sql = "SELECT * FROM product WHERE status = 1";
+require_once 'php_action/core.php';
+
+$sql = "SELECT * FROM products WHERE status = 1";
 $query = $connect->query($sql);
 $countProduct = $query->num_rows;
 
@@ -11,14 +15,21 @@ $orderSql = "SELECT * FROM orders WHERE order_status = 1";
 $orderQuery = $connect->query($orderSql);
 $countOrder = $orderQuery->num_rows;
 
-$totalRevenue = "";
-while ($orderResult = $orderQuery->fetch_assoc()) {
-	$totalRevenue += $orderResult['paid'];
-}
+// $totalRevenue = "";
+// while ($orderResult = $orderQuery->fetch_assoc()) {
+// 	$totalRevenue += $orderResult['paid'];
+// }
 
-$lowStockSql = "SELECT * FROM product WHERE quantity <= 3 AND status = 1";
+$orderSql1 = "SELECT SUM(paid) FROM orders";
+$result = $connect->query($orderSql1);
+
+
+
+$lowStockSql = "SELECT * FROM products WHERE quantity <= 3 AND status = 1";
 $lowStockQuery = $connect->query($lowStockSql);
 $countLowStock = $lowStockQuery->num_rows;
+
+
 
 $connect->close();
 
@@ -32,7 +43,7 @@ $connect->close();
 </style>
 
 <!-- fullCalendar 2.2.5-->
-    <link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar.min.css">
     <link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar.print.css" media="print">
 
 
@@ -88,12 +99,12 @@ $connect->close();
 		<br/>
 
 		<div class="card">
-		  <div class="cardHeader" style="background-color:#245580;">
-		    <h1><?php if($totalRevenue) {
-		    	echo $totalRevenue;
-		    	} else {
-		    		echo '0';
-		    		} ?></h1>
+		  <div class="cardHeader" style="background-color:#42ddf5;">
+		    <h1><?php 
+			while($totalRevenue = mysqli_fetch_array($result)){
+				echo $totalRevenue['SUM(paid)'];
+			}
+			?></h1>
 		  </div>
 
 		  <div class="cardContainer">
